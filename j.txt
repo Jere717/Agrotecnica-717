@@ -1,0 +1,20 @@
+{
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Tokyo Night",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "files.associations": {
+        "*.py": "python"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "workbench.sideBar.location": "right",
+    "workbench.editor.showTabs": false,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "editor.cursorBlinking": "expand",
+    "editor.linkedEditing": true,
+    "editor.cursorSmoothCaretAnimation": "on"
+}

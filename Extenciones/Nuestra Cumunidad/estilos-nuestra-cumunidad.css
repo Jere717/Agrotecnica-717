@@ -1,0 +1,146 @@
+/* # codigo variado */
+
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  /*font-size: 1.2rem;*/
+  min-height: 100%;
+}
+
+/* # fin codigo variado */
+
+/* # header */
+
+.header {
+  grid-area: header;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#header-logo {
+  position: relative;
+  width: 100px;
+  right: 38rem;
+  bottom: 3rem;
+}
+
+header h1 {
+  animation-name: cambio-de-color;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 3rem;
+  position: relative;
+  top: 3rem;
+}
+
+@keyframes cambio-de-color {
+  0% { color: red; }
+  33% { color: green; } 
+  66% { color: blue; } 
+  100% { color: red; } 
+}
+
+header p {
+  font-size: 30px;
+}
+
+/* # fin header */
+
+/* # navbar */
+
+.navbar {
+  grid-area: navbar;
+  background-color: #afd6af;
+}
+
+/* # fin navbar */
+
+/* # menu-lateral */
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #fdcfcf;
+}
+
+/* # fin menu-lateral */
+
+/* # main */
+
+.main {
+  grid-area: main;
+  background-color: #f5f5f5;
+}
+
+.main p, .main h1 {
+  padding: 10px;
+  text-align: justify;
+  line-height: 2rem;
+}
+
+.main h1 {
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* # fin main */
+
+/* # footer */
+
+.footer {
+  grid-area: footer;
+  background-color: #8c96a0;
+}
+
+/* # fin footer */
+
+/* # grid */
+
+.grid-container {
+  display: grid;
+  grid-template:
+    "header"  11rem
+    "navbar"  50px
+    "main"    auto
+    "sidebar" 100px
+    "footer"  100px;
+}
+
+/* # fin grid */
+
+/* # responsive */
+
+@media (min-width: 600px) {
+  .grid-container {
+
+    grid-template:
+      "header  header" 10rem
+      "navbar  navbar" 50px
+      "sidebar main"   auto
+      "footer  footer" 100px /
+      200px    auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template:
+      "header  header header"  13rem
+      "navbar  main   sidebar" auto
+      "footer  footer footer"  100px /
+      200px    auto   200px;
+  }
+}
+
+/* # fin responsive */
